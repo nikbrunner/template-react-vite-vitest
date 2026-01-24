@@ -2,7 +2,7 @@
 
 A minimal React + TypeScript + Vite template with Vitest and React Testing Library pre-configured.
 
-[Open in Stackblitz](https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest)
+[Open in Stackblitz](https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest/tree/with-ts-query)
 
 ## Stack
 
@@ -22,13 +22,13 @@ npm run dev
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Type-check and build for production |
-| `npm run preview` | Preview production build |
-| `npm test` | Run tests once |
-| `npm run test:watch` | Run tests in watch mode |
+| Command              | Description                         |
+| -------------------- | ----------------------------------- |
+| `npm run dev`        | Start development server            |
+| `npm run build`      | Type-check and build for production |
+| `npm run preview`    | Preview production build            |
+| `npm test`           | Run tests once                      |
+| `npm run test:watch` | Run tests in watch mode             |
 
 ## Project Structure
 
@@ -62,6 +62,7 @@ import { describe, expect, test, vi } from "vitest";
 ```
 
 The setup file (`src/test/setup.ts`) handles:
+
 - Importing `@testing-library/jest-dom/vitest` matchers
 - Automatic cleanup after each test
 
@@ -72,16 +73,17 @@ The `useToggle` hook demonstrates testing with `renderHook` and `act`:
 ```ts
 import { act, renderHook } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
+
 import { useToggle } from "./useToggle";
 
 test("toggles value", () => {
-  const { result } = renderHook(() => useToggle());
+    const { result } = renderHook(() => useToggle());
 
-  act(() => {
-    result.current.toggle();
-  });
+    act(() => {
+        result.current.toggle();
+    });
 
-  expect(result.current.value).toBe(true);
+    expect(result.current.value).toBe(true);
 });
 ```
 
@@ -91,20 +93,20 @@ The Button component demonstrates cva usage with CSS Modules:
 
 ```tsx
 const buttonVariants = cva(styles.button, {
-  variants: {
-    variant: {
-      primary: styles.primary,
-      secondary: styles.secondary,
+    variants: {
+        variant: {
+            primary: styles.primary,
+            secondary: styles.secondary
+        },
+        size: {
+            sm: styles.sm,
+            md: styles.md,
+            lg: styles.lg
+        }
     },
-    size: {
-      sm: styles.sm,
-      md: styles.md,
-      lg: styles.lg,
-    },
-  },
-  defaultVariants: {
-    variant: "primary",
-    size: "md",
-  },
+    defaultVariants: {
+        variant: "primary",
+        size: "md"
+    }
 });
 ```

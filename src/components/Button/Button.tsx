@@ -1,35 +1,35 @@
-import { cva, type VariantProps } from "class-variance-authority";
 import type { ButtonHTMLAttributes } from "react";
+
+import { cva, type VariantProps } from "class-variance-authority";
+
 import styles from "./Button.module.css";
 
-const buttonVariants = cva(styles.button, {
-  variants: {
-    variant: {
-      primary: styles.primary,
-      secondary: styles.secondary,
+const variants = cva(styles.button, {
+    variants: {
+        variant: {
+            primary: styles.primary,
+            secondary: styles.secondary
+        },
+        size: {
+            sm: styles.sm,
+            md: styles.md,
+            lg: styles.lg
+        }
     },
-    size: {
-      sm: styles.sm,
-      md: styles.md,
-      lg: styles.lg,
-    },
-  },
-  defaultVariants: {
-    variant: "primary",
-    size: "md",
-  },
+    defaultVariants: {
+        variant: "primary",
+        size: "md"
+    }
 });
 
-type ButtonVariants = VariantProps<typeof buttonVariants>;
+type Variants = VariantProps<typeof variants>;
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, ButtonVariants {
-  children: React.ReactNode;
-}
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement>, Variants {}
 
-export function Button({ children, variant, size, className, ...props }: ButtonProps) {
-  return (
-    <button className={buttonVariants({ variant, size, className })} {...props}>
-      {children}
-    </button>
-  );
+export function Button({ children, variant, size, className, ...props }: Props) {
+    return (
+        <button className={variants({ variant, size, className })} {...props}>
+            {children}
+        </button>
+    );
 }
