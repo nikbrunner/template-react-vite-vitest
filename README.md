@@ -39,6 +39,9 @@ src/
 ├── vite-env.d.ts         # Vite type declarations
 ├── test/
 │   └── setup.ts          # Test setup (cleanup, jest-dom)
+├── hooks/
+│   ├── useToggle.ts      # Example custom hook
+│   └── useToggle.test.ts # Hook tests with renderHook
 └── components/
     └── Button/
         ├── Button.tsx        # Example component with cva
@@ -59,6 +62,26 @@ import { describe, expect, test, vi } from "vitest";
 The setup file (`src/test/setup.ts`) handles:
 - Importing `@testing-library/jest-dom/vitest` matchers
 - Automatic cleanup after each test
+
+## Testing Hooks
+
+The `useToggle` hook demonstrates testing with `renderHook` and `act`:
+
+```ts
+import { act, renderHook } from "@testing-library/react";
+import { describe, expect, test } from "vitest";
+import { useToggle } from "./useToggle";
+
+test("toggles value", () => {
+  const { result } = renderHook(() => useToggle());
+
+  act(() => {
+    result.current.toggle();
+  });
+
+  expect(result.current.value).toBe(true);
+});
+```
 
 ## Component Variants with cva
 
