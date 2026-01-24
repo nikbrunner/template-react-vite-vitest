@@ -2,6 +2,8 @@
 
 A minimal React + TypeScript + Vite template with Vitest and React Testing Library pre-configured.
 
+[Open in Stackblitz](https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest)
+
 ## Stack
 
 - **React 19** with TypeScript
