@@ -2,13 +2,13 @@
 
 A minimal React + TypeScript + Vite template with Vitest and React Testing Library pre-configured.
 
-[Open in Stackblitz](https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest/tree/with-ts-query)
+[Open in Stackblitz](https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest/tree/main)
 
 ## Stack
 
 - **React 19** with TypeScript
 - **Vite** for development and bundling
-- **Vitest** with jsdom environment
+- **Vitest** with happy-dom environment
 - **React Testing Library** with jest-dom matchers
 - **class-variance-authority (cva)** for component variants
 - **CSS Modules** for styling
@@ -52,6 +52,8 @@ src/
 ```
 
 ## Testing
+
+This template uses [happy-dom](https://github.com/capricorn86/happy-dom) instead of jsdom for DOM emulation. Happy-dom is faster and works reliably in both local Node.js environments and StackBlitz's WebContainer (jsdom 27+ has [compatibility issues](https://github.com/vitest-dev/vitest/issues/9279) with StackBlitz).
 
 Tests use explicit imports from vitest (no globals):
 
