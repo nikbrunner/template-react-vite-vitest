@@ -1,8 +1,15 @@
 # template-react-vite-vitest
 
-A minimal React + TypeScript + Vite template with Vitest and React Testing Library pre-configured.
+A minimal React + TypeScript template designed for **frontend interview practice**. Optimized for StackBlitz so you can jump straight into timed coding exercises.
 
-[Open in Stackblitz](https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest/tree/main)
+## Purpose
+
+This repo serves two goals:
+
+1. **Interview Practice Environment** - Timed exercises covering React fundamentals, testing, and common UI patterns. See [`exercises/`](./exercises/README.md) for the full system.
+2. **Minimal React Template** - A clean starting point with testing pre-configured, usable for any quick prototyping.
+
+[Open in StackBlitz](https://stackblitz.com/github/nikbrunner/template-react-vite-vitest)
 
 ## Stack
 
