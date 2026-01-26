@@ -1,0 +1,23 @@
+/* ShoppingCart component styles */
+
+.container {
+    /* TODO: Style the container - consider two-column layout */
+}
+
+.products {
+    /* TODO: Style the products section */
+}
+
+.cart {
+    /* TODO: Style the cart section */
+}
+
+/* TODO: Add styles for:
+ * - Product cards with image, name, price
+ * - Add to Cart button
+ * - Cart items with quantity controls
+ * - Quantity +/- buttons
+ * - Subtotal display
+ * - Empty cart message
+ * - Loading and error states
+ */
