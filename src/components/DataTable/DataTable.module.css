@@ -1,0 +1,24 @@
+/* DataTable component styles */
+
+.container {
+    /* TODO: Style the container */
+}
+
+.table {
+    /* TODO: Use CSS Grid for table layout
+     * grid-template-columns: 2fr 2fr 1fr 1fr;
+     * (Name, Email, Role, Status)
+     */
+}
+
+/* TODO: Add styles for:
+ * - Header cells (clickable, hover state)
+ * - Sort direction indicator (arrow)
+ * - Active sort column highlight
+ * - Data cells
+ * - Row hover effect
+ * - Pagination controls
+ * - Disabled pagination buttons
+ * - Page info display
+ * - Loading and error states
+ */
