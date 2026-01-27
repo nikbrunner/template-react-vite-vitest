@@ -1,7 +1,7 @@
 ---
 name: practice
 description: This skill should be used when the user says "/practice", "start exercise", "review exercise", "practice status", or wants to work on interview preparation exercises.
-version: 1.0.0
+version: 2.0.0
 ---
 
 # Practice Skill
@@ -18,22 +18,33 @@ Interview practice system for frontend exercises.
 
 ## On `/practice start <number>`
 
-1. **Read the TASK.md file** for the specified exercise number from the `exercises/` folder.
+1. **Get the exercise info** from the Exercise Reference table below.
 
 2. **Display the requirements** clearly:
     - Time limit
-    - Requirements checklist
+    - Focus areas
+    - Core requirements checklist
     - Test requirements
     - Evaluation criteria
 
-3. **Provide the correct StackBlitz link:**
-    - Exercises 01-04: `https://stackblitz.com/github/nikbrunner/template-react-vite-vitest`
-    - Exercises 05-07: `https://stackblitz.com/github/nikbrunner/template-react-vite-vitest/tree/with-ts-query`
+3. **Provide the StackBlitz link** using the branch-based URL pattern:
+    ```
+    https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest/tree/exercise/<number>-<name>
+    ```
+
+    Each exercise has its own branch with:
+    - TASK.md at root (visible in StackBlitz)
+    - Component scaffolding with interfaces and TODO comments
+    - Test file with empty test stubs
+    - CSS module placeholder
+    - For exercises 05-07: TanStack Query setup included
 
 4. **Open the link** in the browser.
 
 5. **Remind the user:**
     - Start timer when ready
+    - TASK.md is visible at root with full requirements
+    - Component scaffold is in src/components/
     - Download as zip when done
     - Return and run `/practice review <number>`
 
@@ -53,7 +64,7 @@ Interview practice system for frontend exercises.
     - **Code Quality (20%):** Clean code, proper patterns?
     - **CSS/Styling (20%):** Reasonable UI, proper CSS techniques?
 
-4. **Create a dated review file** in `exercises/<exercise>/reviews/YYYY-MM-DD.md`:
+4. **Create a dated review file** in `exercises/<exercise-name>/reviews/YYYY-MM-DD.md`:
 
 ````markdown
 # Review: [Exercise Name] - YYYY-MM-DD
@@ -108,7 +119,7 @@ Interview practice system for frontend exercises.
 
 ## On `/practice status`
 
-1. **Check the reviews folder** for each exercise.
+1. **Check the reviews folder** for each exercise in `exercises/`.
 
 2. **Display a progress table:**
 
@@ -123,13 +134,22 @@ Interview practice system for frontend exercises.
 
 ## Exercise Reference
 
-| # | Name | Time | Branch |
-|---|------|------|--------|
-| 01 | Password Strength | 60 min | main |
-| 02 | Todo List + Filters | 60 min | main |
-| 03 | Form Validation | 60 min | main |
-| 04 | Modal Component | 60 min | main |
-| 05 | User Directory | 60 min | with-ts-query |
-| 06 | Shopping Cart | 60 min | with-ts-query |
-| 07 | Data Table | 75 min | with-ts-query |
+| # | Name | Time | Branch | TanStack Query |
+|---|------|------|--------|----------------|
+| 01 | Password Strength | 60 min | `exercise/01-password-strength` | No |
+| 02 | Todo List | 60 min | `exercise/02-todo-list` | No |
+| 03 | Form Validation | 60 min | `exercise/03-form-validation` | No |
+| 04 | Modal Component | 60 min | `exercise/04-modal-component` | No |
+| 05 | User Directory | 60 min | `exercise/05-user-directory` | Yes |
+| 06 | Shopping Cart | 60 min | `exercise/06-shopping-cart` | Yes |
+| 07 | Data Table | 75 min | `exercise/07-data-table` | Yes |
+
+## StackBlitz URL Examples
+
+```
+# Exercise 01
+https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest/tree/exercise/01-password-strength
+
+# Exercise 05 (with TanStack Query)
+https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest/tree/exercise/05-user-directory
 ```

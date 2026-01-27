@@ -6,8 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This repo is a **frontend interview practice system**. It provides:
 
-1. A minimal React + Vitest template optimized for StackBlitz
-2. Timed exercises in `exercises/` covering React patterns, testing, and UI implementation
+1. A minimal React + Vitest template optimized for StackBlitz (`main` branch)
+2. Seven exercise branches with structured scaffolding and requirements
 3. A `/practice` skill for managing exercise workflow (start, review, status)
 
 The template itself is intentionally minimal - just enough to demonstrate patterns (cva, CSS Modules, hook testing) without bloat.
@@ -80,8 +80,25 @@ const buttonVariants = cva(styles.button, {
 
 Use `/practice` for exercises:
 
-- `/practice start 01` - Start exercise, opens StackBlitz
+- `/practice start 01` - Start exercise, opens StackBlitz with scaffolding
 - `/practice review 01` - Review completed zip, creates feedback file
 - `/practice status` - Show progress across all exercises
 
-Exercises 01-04 use `main` branch. Exercises 05-07 use `with-ts-query` branch (adds TanStack Query).
+## Exercise Branches
+
+Each exercise has its own branch with:
+- TASK.md at root (visible in StackBlitz)
+- Component scaffold in `src/components/<Name>/`
+- Empty test stubs to fill in
+
+| Branch | TanStack Query |
+|--------|----------------|
+| `exercise/01-password-strength` | No |
+| `exercise/02-todo-list` | No |
+| `exercise/03-form-validation` | No |
+| `exercise/04-modal-component` | No |
+| `exercise/05-user-directory` | Yes |
+| `exercise/06-shopping-cart` | Yes |
+| `exercise/07-data-table` | Yes |
+
+Reviews are stored in `exercises/<name>/reviews/` on the `main` branch.

@@ -1,6 +1,6 @@
 # Interview Practice System
 
-Structured exercises for Proton frontend interview preparation. Each exercise runs in StackBlitz, reviews happen locally after downloading your completed work.
+Structured exercises for frontend interview preparation. Each exercise runs in StackBlitz, reviews happen locally after downloading your completed work.
 
 ## Quick Start
 
@@ -9,29 +9,41 @@ Structured exercises for Proton frontend interview preparation. Each exercise ru
 3. **Download your work** as zip when done
 4. **Review:** `/practice review 01`
 
-## Branch Strategy
+## Branch-Based System
 
-| Branch          | StackBlitz URL                                                                                               | Use For                            |
-| --------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
-| `main`          | [Open in StackBlitz](https://stackblitz.com/github/nikbrunner/template-react-vite-vitest)                    | Exercises 01-04 (no data fetching) |
-| `with-ts-query` | [Open in StackBlitz](https://stackblitz.com/github/nikbrunner/template-react-vite-vitest/tree/with-ts-query) | Exercises 05-07 (async data)       |
+Each exercise has its own Git branch with:
 
-**What's included:**
+- **TASK.md at root** - Requirements visible in StackBlitz
+- **Component scaffolding** - Interfaces, TODO comments, empty test stubs
+- **Exercise-specific setup** - TanStack Query for exercises 05-07
 
-- **main:** React, Vitest, React Testing Library, CSS Modules, cva
-- **with-ts-query:** Above + TanStack Query, user API setup
+### StackBlitz URL Pattern
+
+```
+https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest/tree/exercise/<number>-<name>
+```
 
 ## Exercises
 
-| #   | Exercise                                              | Difficulty | Time   | Branch        | Focus                          |
-| --- | ----------------------------------------------------- | ---------- | ------ | ------------- | ------------------------------ |
-| 01  | [Password Strength](./01-password-strength/TASK.md)   | ⭐         | 60 min | main          | State, conditional rendering   |
-| 02  | [Todo List + Filters](./02-todo-list-filters/TASK.md) | ⭐⭐       | 60 min | main          | Array methods, filtering       |
-| 03  | [Form Validation](./03-form-validation/TASK.md)       | ⭐⭐       | 60 min | main          | Forms, validation, errors      |
-| 04  | [Modal Component](./04-modal-component/TASK.md)       | ⭐⭐       | 60 min | main          | Accessibility, keyboard        |
-| 05  | [User Directory](./05-user-directory/TASK.md)         | ⭐⭐⭐     | 60 min | with-ts-query | Async data, loading states     |
-| 06  | [Shopping Cart](./06-shopping-cart/TASK.md)           | ⭐⭐⭐     | 60 min | with-ts-query | State management, calculations |
-| 07  | [Data Table](./07-data-table/TASK.md)                 | ⭐⭐⭐⭐   | 75 min | with-ts-query | Sorting, pagination, CSS Grid  |
+| #   | Exercise          | Difficulty | Time   | Branch                            | Focus                          |
+| --- | ----------------- | ---------- | ------ | --------------------------------- | ------------------------------ |
+| 01  | Password Strength | ⭐         | 60 min | `exercise/01-password-strength`   | State, conditional rendering   |
+| 02  | Todo List         | ⭐⭐       | 60 min | `exercise/02-todo-list`           | Array methods, filtering       |
+| 03  | Form Validation   | ⭐⭐       | 60 min | `exercise/03-form-validation`     | Forms, validation, errors      |
+| 04  | Modal Component   | ⭐⭐       | 60 min | `exercise/04-modal-component`     | Accessibility, keyboard        |
+| 05  | User Directory    | ⭐⭐⭐     | 60 min | `exercise/05-user-directory`      | Async data, loading states     |
+| 06  | Shopping Cart     | ⭐⭐⭐     | 60 min | `exercise/06-shopping-cart`       | State management, calculations |
+| 07  | Data Table        | ⭐⭐⭐⭐   | 75 min | `exercise/07-data-table`          | Sorting, pagination, CSS Grid  |
+
+## What's Included in Each Branch
+
+**Exercises 01-04 (basic):**
+- React, Vitest, React Testing Library, CSS Modules, cva
+- Component scaffold with types and TODO comments
+
+**Exercises 05-07 (async):**
+- Above + TanStack Query with QueryClientProvider
+- Mock API with sample data
 
 ## Workflow
 
@@ -43,12 +55,18 @@ Structured exercises for Proton frontend interview preparation. Each exercise ru
 
 This will:
 
-1. Display the TASK.md requirements
+1. Show you the requirements
 2. Open the correct StackBlitz link in your browser
 3. Start your timer (honor system)
 
 ### During the Exercise
 
+In StackBlitz you'll find:
+- TASK.md at root with full requirements
+- Component scaffold in `src/components/<Name>/`
+- Empty test stubs to fill in
+
+Tips:
 - Read requirements carefully before coding
 - Write tests as you go
 - Focus on functionality first, polish second
@@ -64,10 +82,10 @@ This will:
 
 ## Review Files
 
-Each exercise has a `reviews/` folder. After each attempt, a dated review file is created:
+Reviews are stored locally in this repo:
 
 ```
-exercises/03-form-validation/reviews/2025-01-25.md
+exercises/<exercise-name>/reviews/YYYY-MM-DD.md
 ```
 
 This lets you track progress over multiple attempts.
