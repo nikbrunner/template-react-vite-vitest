@@ -29,17 +29,19 @@ https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest/tree/ex
 | --- | ----------------- | ---------- | ------ | --------------------------------- | ------------------------------ |
 | 01  | Password Strength | ⭐         | 60 min | `exercise/01-password-strength`   | State, conditional rendering   |
 | 02  | Todo List         | ⭐⭐       | 60 min | `exercise/02-todo-list`           | Array methods, filtering       |
-| 03  | Form Validation   | ⭐⭐       | 60 min | `exercise/03-form-validation`     | Forms, validation, errors      |
-| 04  | Modal Component   | ⭐⭐       | 60 min | `exercise/04-modal-component`     | Accessibility, keyboard        |
+| 03  | Form Validation   | ⭐⭐       | 60 min | `exercise/03-form-validation`     | Forms, validation, `isEmail()` utility |
+| 04a | Dialog Modal      | ⭐⭐       | 60 min | `exercise/04a-dialog-modal`       | Native `<dialog>`, a11y        |
+| 04b | Portal Modal      | ⭐⭐       | 60 min | `exercise/04b-portal-modal`       | React `createPortal`, a11y     |
 | 05  | User Directory    | ⭐⭐⭐     | 60 min | `exercise/05-user-directory`      | Async data, loading states     |
-| 06  | Shopping Cart     | ⭐⭐⭐     | 60 min | `exercise/06-shopping-cart`       | State management, calculations |
+| 06  | Shopping Cart     | ⭐⭐⭐     | 60 min | `exercise/06-shopping-cart`       | State management, `formatPrice()` utility |
 | 07  | Data Table        | ⭐⭐⭐⭐   | 75 min | `exercise/07-data-table`          | Sorting, pagination, CSS Grid  |
 
 ## What's Included in Each Branch
 
-**Exercises 01-04 (basic):**
+**Exercises 01-04a/b (basic):**
 - React, Vitest, React Testing Library, CSS Modules, cva
 - Component scaffold with types and TODO comments
+- 03 includes `isEmail()` utility, 04a uses native `<dialog>`, 04b uses `createPortal`
 
 **Exercises 05-07 (async):**
 - Above + TanStack Query with QueryClientProvider

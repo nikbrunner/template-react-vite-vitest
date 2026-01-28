@@ -91,14 +91,15 @@ Each exercise has its own branch with:
 - Component scaffold in `src/components/<Name>/`
 - Empty test stubs to fill in
 
-| Branch | TanStack Query |
-|--------|----------------|
-| `exercise/01-password-strength` | No |
-| `exercise/02-todo-list` | No |
-| `exercise/03-form-validation` | No |
-| `exercise/04-modal-component` | No |
-| `exercise/05-user-directory` | Yes |
-| `exercise/06-shopping-cart` | Yes |
-| `exercise/07-data-table` | Yes |
+| Branch | TanStack Query | Notes |
+|--------|----------------|-------|
+| `exercise/01-password-strength` | No | |
+| `exercise/02-todo-list` | No | |
+| `exercise/03-form-validation` | No | `isEmail()` utility provided |
+| `exercise/04a-dialog-modal` | No | Native `<dialog>` element |
+| `exercise/04b-portal-modal` | No | React `createPortal` |
+| `exercise/05-user-directory` | Yes | |
+| `exercise/06-shopping-cart` | Yes | `formatPrice()` utility provided |
+| `exercise/07-data-table` | Yes | |
 
 Reviews are stored in `exercises/<name>/reviews/` on the `main` branch.

@@ -134,21 +134,28 @@ Interview practice system for frontend exercises.
 
 ## Exercise Reference
 
-| # | Name | Time | Branch | TanStack Query |
-|---|------|------|--------|----------------|
-| 01 | Password Strength | 60 min | `exercise/01-password-strength` | No |
-| 02 | Todo List | 60 min | `exercise/02-todo-list` | No |
-| 03 | Form Validation | 60 min | `exercise/03-form-validation` | No |
-| 04 | Modal Component | 60 min | `exercise/04-modal-component` | No |
-| 05 | User Directory | 60 min | `exercise/05-user-directory` | Yes |
-| 06 | Shopping Cart | 60 min | `exercise/06-shopping-cart` | Yes |
-| 07 | Data Table | 75 min | `exercise/07-data-table` | Yes |
+| # | Name | Time | Branch | TanStack Query | Notes |
+|---|------|------|--------|----------------|-------|
+| 01 | Password Strength | 60 min | `exercise/01-password-strength` | No | |
+| 02 | Todo List | 60 min | `exercise/02-todo-list` | No | |
+| 03 | Form Validation | 60 min | `exercise/03-form-validation` | No | `isEmail()` utility provided |
+| 04a | Dialog Modal | 60 min | `exercise/04a-dialog-modal` | No | Native `<dialog>` element |
+| 04b | Portal Modal | 60 min | `exercise/04b-portal-modal` | No | React `createPortal` |
+| 05 | User Directory | 60 min | `exercise/05-user-directory` | Yes | |
+| 06 | Shopping Cart | 60 min | `exercise/06-shopping-cart` | Yes | `formatPrice()` utility provided |
+| 07 | Data Table | 75 min | `exercise/07-data-table` | Yes | |
 
 ## StackBlitz URL Examples
 
 ```
 # Exercise 01
 https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest/tree/exercise/01-password-strength
+
+# Exercise 04a (native dialog)
+https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest/tree/exercise/04a-dialog-modal
+
+# Exercise 04b (createPortal)
+https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest/tree/exercise/04b-portal-modal
 
 # Exercise 05 (with TanStack Query)
 https://stackblitz.com/fork/github/nikbrunner/template-react-vite-vitest/tree/exercise/05-user-directory
