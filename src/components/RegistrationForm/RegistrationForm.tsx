@@ -1,3 +1,5 @@
+import { isEmail } from "../../lib/validation";
+
 import styles from "./RegistrationForm.module.css";
 
 export interface FormData {
@@ -11,6 +13,7 @@ interface RegistrationFormProps {
 
 export function RegistrationForm({ onSubmit }: RegistrationFormProps) {
     // TODO: Implement registration form with validation
+    // Use isEmail() from lib/validation.ts for email validation
     // - Email field (required, valid email format)
     // - Password field (required, min 8 chars)
     // - Confirm Password field (required, must match password)

@@ -76,10 +76,17 @@ interface RegistrationFormProps {
 <RegistrationForm onSubmit={data => console.log(data)} />;
 ```
 
+## Provided Utilities
+
+An `isEmail()` function is provided in `src/lib/validation.ts` - use it for email validation.
+
 ## File Structure
 
 ```
 src/
+├── lib/
+│   ├── validation.ts          # isEmail() provided
+│   └── validation.test.ts     # Tests for validation utils
 ├── components/
 │   └── RegistrationForm/
 │       ├── RegistrationForm.tsx
@@ -124,12 +131,15 @@ interface FormState {
 </details>
 
 <details>
-<summary>Hint 2: Email validation regex</summary>
+<summary>Hint 2: Using the provided isEmail utility</summary>
 
 ```tsx
-const isValidEmail = (email: string): boolean => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-};
+import { isEmail } from "../../lib/validation";
+
+// Use in validation logic
+if (!isEmail(values.email)) {
+    errors.email = "Invalid email format";
+}
 ```
 
 </details>
