@@ -1,0 +1,33 @@
+/* Modal component styles using native <dialog> */
+
+.modal {
+    /* TODO: Style the dialog
+     * - Remove default border
+     * - Add border-radius
+     * - Set max-width
+     * - Remove default padding (add to content instead)
+     */
+}
+
+.modal::backdrop {
+    /* TODO: Style the backdrop
+     * - Semi-transparent dark background
+     */
+}
+
+.header {
+    /* TODO: Style the header
+     * - Title and close button layout
+     * - Border bottom
+     */
+}
+
+.content {
+    /* TODO: Style the content area
+     * - Padding
+     */
+}
+
+/* TODO: Add styles for:
+ * - Close button (X) positioned in header
+ */
