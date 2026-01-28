@@ -1,21 +1,15 @@
-import { useState } from "react";
-
 import styles from "./App.module.css";
-import { Button } from "./components/Button/Button";
+import { RegistrationForm } from "./components/RegistrationForm/RegistrationForm";
 
 export function App() {
-    const [count, setCount] = useState(0);
+    const handleSubmit = (data: { email: string; password: string }) => {
+        console.log("Form submitted:", data);
+    };
 
     return (
         <main className={styles.app}>
-            <h1>Vite App</h1>
-            <p>Count: {count}</p>
-            <div className={styles.buttons}>
-                <Button onClick={() => setCount(c => c + 1)}>Increment</Button>
-                <Button variant="secondary" onClick={() => setCount(0)}>
-                    Reset
-                </Button>
-            </div>
+            <h1>Registration</h1>
+            <RegistrationForm onSubmit={handleSubmit} />
         </main>
     );
 }
