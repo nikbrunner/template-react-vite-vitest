@@ -20,45 +20,26 @@ function TestWrapper({ children }: { children: React.ReactNode }) {
 
 describe("ShoppingCart", () => {
     test("shows loading state while fetching products", () => {
-        // TODO: Implement
-        // render(<ShoppingCart />, { wrapper: TestWrapper });
-        // expect(screen.getByText(/loading/i)).toBeInTheDocument();
+        // TODO
     });
 
     test("renders products after fetch", async () => {
-        // TODO: Implement
-        // render(<ShoppingCart />, { wrapper: TestWrapper });
-        // expect(await screen.findByText("Wireless Headphones")).toBeInTheDocument();
-        // expect(screen.getByText("$79.99")).toBeInTheDocument();
+        // TODO
     });
 
     test("can add product to cart", async () => {
-        // TODO: Implement
-        // const user = userEvent.setup();
-        // render(<ShoppingCart />, { wrapper: TestWrapper });
-        // const addButton = await screen.findByRole("button", { name: /add to cart/i });
-        // await user.click(addButton);
-        // // Verify item appears in cart
+        // TODO
     });
 
     test("can increment/decrement quantity", async () => {
-        // TODO: Implement
-        // const user = userEvent.setup();
-        // render(<ShoppingCart />, { wrapper: TestWrapper });
-        // // Add a product first
-        // // Then test increment/decrement buttons
+        // TODO
     });
 
     test("calculates subtotal correctly", async () => {
-        // TODO: Implement
-        // const user = userEvent.setup();
-        // render(<ShoppingCart />, { wrapper: TestWrapper });
-        // // Add products and verify subtotal
+        // TODO
     });
 
     test("shows empty cart message when empty", () => {
-        // TODO: Implement
-        // render(<ShoppingCart />, { wrapper: TestWrapper });
-        // expect(screen.getByText(/cart is empty/i)).toBeInTheDocument();
+        // TODO
     });
 });
