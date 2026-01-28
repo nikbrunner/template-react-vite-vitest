@@ -90,6 +90,7 @@ Each exercise has its own branch with:
 - TASK.md at root (visible in StackBlitz)
 - Component scaffold in `src/components/<Name>/`
 - Empty test stubs to fill in
+- `reviews/` folder for storing review feedback
 
 | Branch | TanStack Query | Notes |
 |--------|----------------|-------|
@@ -101,5 +102,3 @@ Each exercise has its own branch with:
 | `exercise/05-user-directory` | Yes | |
 | `exercise/06-shopping-cart` | Yes | `formatPrice()` utility provided |
 | `exercise/07-data-table` | Yes | |
-
-Reviews are stored in `exercises/<name>/reviews/` on the `main` branch.

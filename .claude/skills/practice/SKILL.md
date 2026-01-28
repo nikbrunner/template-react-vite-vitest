@@ -37,6 +37,7 @@ Interview practice system for frontend exercises.
     - Component scaffolding with interfaces and TODO comments
     - Test file with empty test stubs
     - CSS module placeholder
+    - `reviews/` folder for storing review files
     - For exercises 05-07: TanStack Query setup included
 
 4. **Open the link** in the browser.
@@ -64,7 +65,10 @@ Interview practice system for frontend exercises.
     - **Code Quality (20%):** Clean code, proper patterns?
     - **CSS/Styling (20%):** Reasonable UI, proper CSS techniques?
 
-4. **Create a dated review file** in `exercises/<exercise-name>/reviews/YYYY-MM-DD.md`:
+4. **Create a dated review file** on the exercise branch in `reviews/YYYY-MM-DD.md`:
+   - First checkout the exercise branch: `git checkout exercise/<number>-<name>`
+   - Create the review file in the `reviews/` folder
+   - Commit and push the review
 
 ````markdown
 # Review: [Exercise Name] - YYYY-MM-DD
@@ -119,7 +123,7 @@ Interview practice system for frontend exercises.
 
 ## On `/practice status`
 
-1. **Check the reviews folder** for each exercise in `exercises/`.
+1. **Check the reviews folder** on each exercise branch (in the `reviews/` directory).
 
 2. **Display a progress table:**
 
