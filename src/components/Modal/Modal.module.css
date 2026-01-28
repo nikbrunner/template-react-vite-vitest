@@ -1,0 +1,38 @@
+/* Modal component styles using createPortal */
+
+.overlay {
+    /* TODO: Style the overlay
+     * - Fixed position, full screen
+     * - Semi-transparent background
+     * - Flex center to position modal
+     * - High z-index
+     */
+}
+
+.modal {
+    /* TODO: Style the modal
+     * - Background color
+     * - Border radius
+     * - Box shadow
+     * - Max width
+     * - Prevent overflow
+     */
+}
+
+.header {
+    /* TODO: Style the header
+     * - Title and close button layout
+     * - Border bottom
+     */
+}
+
+.content {
+    /* TODO: Style the content area
+     * - Padding
+     */
+}
+
+/* TODO: Add styles for:
+ * - Close button (X) positioned in header
+ * - Transitions for open/close animation (optional)
+ */
