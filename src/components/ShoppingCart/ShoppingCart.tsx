@@ -1,4 +1,5 @@
 import type { Product } from "../../api/products";
+import { formatPrice } from "../../lib/format";
 
 import styles from "./ShoppingCart.module.css";
 
@@ -13,6 +14,7 @@ interface ShoppingCartProps {
 
 export function ShoppingCart(props: ShoppingCartProps) {
     // TODO: Implement shopping cart with TanStack Query
+    // Use formatPrice() from lib/format.ts for price display
     // - Fetch products from API on mount
     // - Display product list with name and price
     // - "Add to Cart" button on each product

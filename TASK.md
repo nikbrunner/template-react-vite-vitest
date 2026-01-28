@@ -75,10 +75,17 @@ Create `ShoppingCart.test.tsx`:
 3. Add "Save for later" functionality
 4. Implement promo code discount
 
+## Provided Utilities
+
+A `formatPrice()` function is provided in `src/lib/format.ts` - use it for price display.
+
 ## File Structure
 
 ```
 src/
+├── lib/
+│   ├── format.ts          # formatPrice() provided
+│   └── format.test.ts     # Tests for format utils
 ├── components/
 │   └── ShoppingCart/
 │       ├── ShoppingCart.tsx
@@ -132,17 +139,14 @@ const subtotal = useMemo(() => {
 </details>
 
 <details>
-<summary>Hint 3: Format currency</summary>
+<summary>Hint 3: Using the provided formatPrice utility</summary>
 
 ```tsx
-const formatPrice = (cents: number): string => {
-    return new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD"
-    }).format(cents / 100);
-};
+import { formatPrice } from "../../lib/format";
 
-// Usage: formatPrice(1999) → "$19.99"
+// Usage in JSX
+<span>{formatPrice(product.price)}</span>  // "$79.99"
+<span>Subtotal: {formatPrice(subtotal)}</span>
 ```
 
 </details>
